@@ -1,0 +1,54 @@
+---
+import { getCollection } from 'astro:content';
+import ArrowRight from '../../icons/ArrowRight.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Subscribe from '../../components/Subscribe.astro';
+import { sortItemsByDateDesc, getAllTags, getPostsByTag } from '../../utils/data-utils';
+
+const posts = (await getCollection('blog')).sort(sortItemsByDateDesc);
+const tags = getAllTags(posts).sort((tagA, tagB) => {
+    const postCountTagA = getPostsByTag(posts, tagA.slug).length;
+    const postCountTagB = getPostsByTag(posts, tagB.slug).length;
+    return postCountTagB - postCountTagA;
+});
+---
+
+<!-- *** Obs: Fjern den lange kommentaren nedenfor for å skru på tags igjen. *** -->
+<BaseLayout
+    title="Tags"
+    description="Explore tags for easier navigation. Find topics organized by tags in order to locate the content that interests you the most."
+    showHeader={false}
+>
+    <!-- <h1 class="mb-12 text-2xl font-serif italic sm:mb-16 sm:text-4xl">All Tags</h1> -->
+    <h1 class="mb-12 text-2xl font-sans normal sm:mb-16 sm:text-4xl">All tags</h1>
+
+    <p class="italic">(This feature is not implemented on the site yet.)</p>
+
+    <!-- *** FJERN DENNE KOMMENTAREN FOR Å SKRU PÅ TAGS IGJEN *** 
+
+    {
+        tags.map((tag) => {
+            const postCount = getPostsByTag(posts, tag.slug).length;
+            return (
+                <a class="mb-10 flex justify-between items-start gap-8 group sm:mb-12" href={`/tags/${tag.slug}`}>
+                    <div class="grow">
+                        {/* <h2 class="text-xl leading-tight font-serif font-medium group-hover:underline group-hover:decoration-dashed group-hover:underline-offset-4 group-hover:decoration-1 sm:text-2xl"> */}
+                        <h2 class="text-xl leading-tight font-sans font-medium group-hover:underline group-hover:decoration-dashed group-hover:underline-offset-4 group-hover:decoration-1 sm:text-2xl">
+                            {tag.name}
+                        </h2>
+                        <div class="mt-1 text-sm leading-normal">
+                            {postCount} {postCount === 1 ? 'post' : 'posts'}
+                        </div>
+                    </div>
+                    {/* <div class="hidden font-serif italic opacity-0 transition group-hover:opacity-100 sm:inline-flex sm:gap-1 sm:items-center sm:shrink-0"> */}
+                    <div class="hidden font-sans normal opacity-0 transition group-hover:opacity-100 sm:inline-flex sm:gap-1 sm:items-center sm:shrink-0">
+                        View tag archive <ArrowRight class="fill-current w-4 h-4" />
+                    </div>
+                </a>
+            );
+        })
+    }
+-->
+
+    <!-- <Subscribe class="my-16 sm:my-24" /> -->
+</BaseLayout>
