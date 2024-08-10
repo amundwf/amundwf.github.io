@@ -121,7 +121,7 @@ const siteConfig: SiteConfig = {
         // "My overall goal with my work is to have a positive impact on people's well-being."
         image: {
             // src: '/hero.jpeg',
-            // src: '/placeholder.png',
+            src: '/placeholder-black-line.png',
             // alt: 'Image'
         },
         actions: [
