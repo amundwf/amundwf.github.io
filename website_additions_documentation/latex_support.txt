@@ -1,0 +1,99 @@
+Added support for Latex in Markdown files, using Katex.
+
+Added the following code to the following files:
+
+File: astro.config.mjs
+
+Added code:
+1)
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+
+...
+
+2)
+    markdown: {
+        remarkPlugins: [remarkMath],
+        rehypePlugins: [rehypeKatex]
+    }
+
+
+
+Full code context:
+
+import { defineConfig } from 'astro/config';
+import mdx from '@astrojs/mdx';
+import sitemap from '@astrojs/sitemap';
+import tailwind from '@astrojs/tailwind';
+// import mathJaxIntegration from './src/integrations/astro-mathjax.js';
+
+// https://astro.build/config
+export default defineConfig({
+    // site: 'https://example.com',
+    site: 'https://amundwf.github.io',
+    // base: 
+    integrations: [
+        mdx(),
+        sitemap(),
+        tailwind({
+            applyBaseStyles: false
+        })
+        //mathJaxIntegration()
+    ]
+    markdown: {
+        remarkPlugins: [remarkMath],
+        rehypePlugins: [rehypeKatex]
+    }
+});
+
+
+
+---------------------------------------
+
+Addition 2:
+File: BaseLayout.astro
+
+Added code:
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
+
+
+Location: In the <head> ... part.
+
+Full code context:
+---
+import { ClientRouter } from 'astro:transitions';
+import BaseHead, { type Props as HeadProps } from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import Nav from '../components/Nav.astro';
+
+export type Props = HeadProps & { showHeader?: boolean };
+
+const { showHeader = true, ...head } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="antialiased break-words">
+    <head>
+        <BaseHead {...head} />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
+        <script>
+            if (localStorage.theme === 'dark') {
+                document.documentElement.classList.add('dark');
+            }
+        </script>
+        <ClientRouter />
+    </head>
+    <body class="bg-main text-main">
+        <div class="flex flex-col min-h-screen px-4 md:px-8">
+            <Nav />
+            {showHeader && <Header />}
+            <main class="grow w-full max-w-3xl mx-auto">
+                <slot />
+            </main>
+            <Footer />
+        </div>
+    </body>
+</html>
+
+

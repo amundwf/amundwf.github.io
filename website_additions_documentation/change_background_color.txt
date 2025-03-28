@@ -1,0 +1,17 @@
+File where you can change background color:
+\src\styles\global.css
+
+Relevant variables:
+
+:root {
+    --color-text-main: 23 23 23; /* #171717 */
+    --color-bg-main: 255 255 255; /* #FFFFFF */
+    --color-bg-muted: 240 238 235; /* #EAE9E1 */
+    --color-border-main: 23 23 23; /* #171717 */
+}
+html.dark {
+    --color-text-main: 242 241 236; /* #F2F1EC */
+    --color-bg-main: 23 23 23; /* #171717 */
+    --color-bg-muted: 36 36 36; /* #242424 */
+    --color-border-main: 242 241 236; /* #F2F1EC */
+}

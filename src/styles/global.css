@@ -13,7 +13,8 @@
 
     :root {
         --color-text-main: 23 23 23; /* #171717 */
-        --color-bg-main: 255 253 250; /* #F2F1EC */
+        /*--color-bg-main: 255 253 250;  #F2F1EC */
+        --color-bg-main: 255 255 255; /* #FFFFFF */
         --color-bg-muted: 240 238 235; /* #EAE9E1 */
         --color-border-main: 23 23 23; /* #171717 */
     }
