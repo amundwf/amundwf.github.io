@@ -1,6 +1,6 @@
 ---
 title: Heart disease prediction
-description: Predicting heart disease with machine learning
+description: Predicting heart disease using a CNN and XGBoost
 publishDate: 'Mar 28 2025'
 isFeatured: true
 seo:
