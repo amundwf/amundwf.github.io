@@ -1,5 +1,5 @@
 ---
-title: Radiation therapy: Dosimetry for a lung tumor
+title: "Radiation therapy: Dosimetry for a lung tumor"
 description: A simplified dosimetry calculation for a lung tumor
 publishDate: 'Jun 05 2025'
 isFeatured: true
@@ -7,10 +7,10 @@ seo:
   image:
     src: 'placeholder.png'
 ---
+
 <!-- Tags: medical physics, radiation therapy -->
 <!-- First published: Jun 05 2025 -->
 <!-- Last updated: Jun 05 2025 -->
-
 
 **Project overview**: 
 
