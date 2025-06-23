@@ -69,7 +69,7 @@ Assume the following Tissue Maximum Ratio (TMR) values table for this context:
 |    12.0    |       0.727        |       0.741        |
 |    14.0    |       0.683        |       0.698        |
 
-Based on these values, I did (bi)linear interpolation to find the TMR value at depth = 12.5 cm and field size = 4.5x4.5 cm. This yielded a TMR of 0.723. 
+Using these values, I performed a (bi)linear interpolation to find the TMR value at depth = 12.5 cm and field size = 4.5x4.5 cm. This yielded a TMR of 0.723. 
 
 
 ## Known quantities
