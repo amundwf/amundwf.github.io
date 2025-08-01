@@ -14,12 +14,12 @@ seo:
 **Project overview:**
 In this project I analyze a dataset of the sales for an online retail company over two years. I use SQL to retrieve specific information that will be useful for analysis purposes, and then I identify some trends in the sales data and create a dashboard in Power BI for visualization. I show most of the whole process rather than only presenting the results.
 
-This project was my first encounter with SQL and Power BI. I used a combination of online tutorials, documentation, and ChatGPT for learning these tools. I used ChatGPT extensively (and shamelessly 😇) for creating SQL queries as well as for understanding how they worked, to speed up the query writing and the learning process.
+This project was my first encounter with SQL and Power BI. I used a combination of online tutorials, documentation, and large language models (LLMs) for learning these tools. I used LLMs extensively (and shamelessly 😇) for creating SQL queries as well as for understanding how they worked, to speed up the query writing and the learning process.
 
 This project was done on a PC running Windows. The software I used was the following:
 - For setting up a local SQL server: *SQL Server 2022 Configuration Manager*
 - For querying the SQL database: *Microsoft SQL Server Management Studio 19* (SSMS)
-- For data visualization: *Microsoft Power BI*
+- For data visualization: *Power BI*
 
 
 
