@@ -13,7 +13,7 @@ seo:
 
 **Project overview:**
 
-In this project I implemented a machine learning classifier to predict heart disease, based on the article *Deep Ensemble Detection of Congestive Heart Failure Using Short-Term RR Intervals* by Wang et al. (2019). 
+In this project I implemented a machine learning classifier to predict heart disease, based on the paper *Deep Ensemble Detection of Congestive Heart Failure Using Short-Term RR Intervals* by Wang et al. (2019). 
 The classifier is XGBoost with a combination of expert features and deep learning (DL) features as input features. The DL features were calculated with a type of convolutional neural network (CNN).
 
 I used Python throughout the project (Jupyter notebook). 
