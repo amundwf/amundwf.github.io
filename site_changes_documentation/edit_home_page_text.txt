@@ -1,0 +1,6 @@
+How to edit the text on the Home page. 
+
+The relevant file to edit is the site-config.ts file, found at the following location in the codebase:
+\src\data\site-config.ts
+
+Inside site-config.ts, go to: SiteConfig --> hero. There you can edit the relevant fields (e.g. 'title', 'text').
